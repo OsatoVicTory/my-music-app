@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.music-container{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  
+}
+.upper-part{
+  position: fixed;
+  width: 100%;
+  height: 56px;
+  background-color: #393e3f;
+  z-index: 10;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fa-arrow-left{
+  margin-left: 5px;
+  margin-top: 13px;
+  color: white;
+  font-size: 20px;
+}
+.upper-part > h4{
+  color: white;
+  margin-top: 13px;
+  letter-spacing: 0px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.fa-ellipsis-v{
+  margin-right: 10px;
+  margin-top: 13px;
+  font-size: 20px;
+  color: white;
+}
+ul{
+  
+  margin-top: 0px;
+  width: 100%;
+  
+  height: 92vh;
+  
+  background-color: rgb(24, 26, 24);
+  background-size: 100% 100%;
+  
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+li{
+  
+  width: 100%;
+  height: 63px;
+  
+  
+  padding-bottom: 0px;
+  margin-top: 0px;
+  border-bottom: .001px solid rgb(179, 164, 164);
+  border-bottom-width: thin;
+  display: grid;
+  grid-template-columns: 21% 77% 55px;
+}
+li img{
+  margin-left: 15px;
+  border-radius: 2px;
+  width: 70px;
+  height: 60px;
+}
+li .name{
+  margin-top: 0px;
+  padding-top: 4px;
+  padding-left: 4px;
+  text-decoration: none;
+  outline: none;
+  
+  color: white;
+  
+  width: 95%;
+  height: 53px;
+}
+li .duration{
+    float: right;
+    color: white;
+    z-index: 0;
+    font-size: 15px;
+    font-weight: 550;
+    margin-top: 5px;
+    opacity: 0.85;
+    
+}
+.bottom-part{
+    position: fixed;
+    margin-top: -67px;
+    width: 100%;
+    height: 75px;
+  
+    z-index: 5;
+    background-color: #393e3f;
+    display: grid;
+    grid-template-columns: 100px 960px 35px;
+    color: white;
+    text-decoration: none;
+  
+  }
+  .bottom-part img{
+    width: 70px;
+    height: 60px;
+    margin-left: 10px;
+  }
+  .bottom-part .name{
+    width: 95%;
+    height: 53px;
+  }
+  .bottom-part .duration{
+    float: right;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 550;
+    
+    
+  }
+  .invinsible{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #383a3b;
+  
+  }
+  .upper{
+    margin-top: 0px;
+    width: 100%;
+    height: 60px;
+    
+    background-color: #4b4f52;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .upper .fa-arrow-left{
+     margin-left: 5px;
+     margin-top: 13px;
+     color: white;
+     font-size: 20px;
+  }
+  .upper > h3{
+     color: white;
+     margin-top: 13px;
+     letter-spacing: 0px;
+     text-decoration: none;
+     font-size: 17px;
+  }
+  .upper .fa-heart{
+    margin-right: 10px;
+    margin-top: 13px;
+    color: white;
+    font-size: 20px;
+  }
+  .invinsible img{
+    margin-top: 10px;
+    width: 43%;
+    height: 48%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+                
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  
+  }
+  .rest{
+    margin-top: 10px;
+    width: 100%;
+  }
+  .artiste_name{
+    margin-top: 10px;
+    font-size: 30px;
+    color: white;
+    text-transform: capitalize;
+    opacity: 0.75;
+    text-align: center;
+    
+  }
+  .song_name{
+    margin-top: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    opacity: 0.55;
+    
+  }
+  .invinsible .slider_container{
+    margin-top: 5px;
+    width: 85%;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  .invinsible .seek_slider{
+    background: linear-gradient(to right, #fff 0%, #fff 0%, rgb(156, 152, 152) 0%, rgb(156, 152, 152) 0%);
+    border: none;
+    height: 3px;
+    width: 100%;
+    outline: none;
+    
+    -webkit-appearance: none;
+  }
+  .invinsible .seek_slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #fff;
+    appearance: none;
+    cursor: pointer;
+  }
+  .current-time{
+    color: #fff;
+    font-weight: 550;
+  }
+  .total-duration{
+    color: #fff;
+    font-weight: 550;
+  }
+  .invinsible .controls{
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .controls .fa-retweet{
+    font-size: 30px;
+    color: white;
+  }
+  .controls .fa-backward{
+    font-size: 35px;
+    color: white;
+  }
+  .controls .play-pause{
+    width: 65px;
+    height: 65px;
+    background-color: #383a3b;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+  .controls .play-pause .fa-pause{
+    font-size: 36px;
+    color: white;
+    margin-top: 13px;
+    margin-left: 15px;
+  }
+  .controls .play-pause .fa-play{
+    font-size: 36px;
+    color: white;
+    margin-top: 13px;
+    margin-left: 15px;
+  }
+  .controls .fa-forward{
+    font-size: 35px;
+    color: white;
+  }
+.controls .fa-random{
+  font-size: 35px;
+  color: white;
+}
+.invinsible .volume_slide{
+  margin-top: 30px; 
+  margin-left: 20px;
+  width: 75%;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+
+.invinsible .seek_volume{
+  background: linear-gradient(to right, #fff 0%, #fff 50%, #fff 100%);
+  border: none;
+  height: 3px;
+  width: 70%;
+  outline: none;
+  transition: background 5ms ease-in;
+  -webkit-appearance: none;
+}
+.invinsible .seek_volume::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #fff;
+  appearance: none;
+  cursor: pointer;
+}
+.fa-volume-down{
+  color: #fff;
+}
+.fa-volume-up{
+  color: #fff;
+}
+
+@media only screen and (min-width: 420px){
+    
+    .upper-part {
+        height: 56px;
+        margin-top: -1px;
+    }
+    .upper-part > t{
+        font-size: 20px;
+    }
+    .music-container .main{
+        margin-top: 0px;
+        width: 100%;
+    }
+    ul{
+        width: 100%;
+        height: 90vh;
+        margin-top: 56px;
+    }
+    li{
+        width: 100%;
+        height: 60px;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 25% 71% 55px;
+    }
+    li img{
+        width: 55px;
+        height: 50px;
+    }
+    .main1{
+        margin-top: 60px;
+    }
+   
+    .bottom-part{
+        position: fixed;
+        margin-top: -80px;
+        padding-top: 5px;
+        height: 63px;
+        display: grid;
+        grid-template-columns: 15% 77% 55px;
+        
+    }
+    .bottom-part img{
+        padding-top: 0px;
+        padding-left: 3px;
+        width: 60px;
+        height: 55px;
+    }
+    .invinsible img{
+      width: 48%;
+      height: 33%;
+    }
+    .invinsible .slider_container{
+      margin-top: 20px;
+    }
+    .invinsible .controls{
+      margin-top: 15px;
+    }
+    .invinsible .volume_slide{
+      margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 439px){
+    .main{
+        margin-top: 0px;
+    }
+    .main1{
+        margin-top: 56px;
+    }
+    li{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 25% 67% 55px;
+    }
+    .bottom-part{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 22% 70% 55px;
+    
+    }
+}
+@media only screen and (min-width: 1030px){
+    li .duration{
+        float: right;
+    }
+    .invinsible img{
+      width: 60%;
+      height: 53%;
+    }
+}
+@media only screen and (min-height: 1030px) {
+    .upper-part{
+        width: 100%;
+        height: 100px;
+    }
+    .upper-part .fa-arrow-left{
+        font-size: 30px;
+    }
+    .upper-part h4{
+        font-size: 33px;
+    }
+    .upper-part .fa-heart{
+        font-size: 30px;
+    }
+    ul{
+        width: 100%;
+        height: 92vh;
+        
+    }
+    .main1{
+        margin-top: 90px;
+    }
+    li{
+      width: 100%;
+      height: 200px;
+      align-items: center;
+      display: grid;
+      grid-template-columns: 15% 74% 55px;
+    }
+    li img{
+      width: 140px;
+      height: 120px;
+    }
+    li .name{
+       margin-top: -35px;
+       font-size: 28px;
+       
+       
+    }
+    li .duration{
+        float: right;
+        margin-right: 5px;
+        font-size: 22px;
+        color: #fff;
+    }
+    .bottom-part{
+        margin-top: -142px;
+        width: 100%;
+        height: 150px;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 18% 74% 55px;
+      }
+      .bottom-part img{
+        width: 140px;
+        height: 120px;
+      }
+      .bottom-part .name{
+         margin-top: -35px;
+         font-size: 28px;
+         
+         
+      }
+      .invinsible .rest{
+        margin-top: 30px;
+      }
+      .invinsible .slider_container{
+        margin-top: 35px;
+      }
+      .invinsible .controls{
+        margin-top: 45px;
+      }
+      .invinsible .volume_slide{
+        margin-top: 60px;
+      }
+    
+}
